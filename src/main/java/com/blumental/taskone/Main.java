@@ -11,8 +11,10 @@ public class Main {
         Matrix matrix1 = matrices[0];
         Matrix matrix2 = matrices[1];
 
-        Utils.printMatrix(matrix1);
-        Utils.printMatrix(matrix2);
+        StrassenVinogradMultiplier multiplier = new StrassenVinogradMultiplier();
+        Matrix result = multiplier.multiply(matrix1, matrix2);
+
+        Utils.printMatrix(result);
     }
 
     private static Matrix[] readMatrices() {
@@ -27,5 +29,4 @@ public class Main {
             return new Matrix[]{matrix1, matrix2};
         }
     }
-
 }

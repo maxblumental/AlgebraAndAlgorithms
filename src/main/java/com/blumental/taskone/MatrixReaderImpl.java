@@ -10,6 +10,8 @@ public class MatrixReaderImpl implements MatrixReader {
 
         Matrix matrix = new Matrix(n, m);
 
+        scanner.useDelimiter("[^\\d+]");
+
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < m; j++) {
                 if (scanner.hasNext()) {
